@@ -1,0 +1,61 @@
+.header {
+  position: fixed;
+  width: 100%;
+  padding-top: 25px;
+  min-height: 30px;
+  z-index: 5;
+
+  &__inner {
+    @include flex;
+    text-transform: uppercase;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__link {
+    @include ubuntu-500;
+  }
+}
+
+.user {
+  &__btn {
+    @include ubuntu-500;
+    display: inline-block;
+    margin-right: 8px;
+    padding: 7px 28px;
+    text-transform: uppercase;
+    color: $default;
+    border: 1px solid $default;
+    border-radius: 3px;
+    background-color: transparent;
+    transition: all 0.5s ease-in;
+    cursor: pointer;
+    outline: transparent;
+
+    &:hover {
+      color: $nero;
+      border-color: $nero;
+      background-color: $default;
+    }
+
+    &:focus {
+      background-color: gold;
+      color: silver;
+    }
+  }
+
+  &__tell {
+    @include ubuntu-700;
+    font-size: 16px;
+  }
+}

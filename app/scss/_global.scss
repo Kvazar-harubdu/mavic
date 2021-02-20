@@ -1,0 +1,61 @@
+body {
+  @include ubuntu-300;
+  color: $default;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1270px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.title {
+  @include sfDisplay-400;
+  font-size: 44px;
+  line-height: 1.2;
+}
+
+.section-page {
+  min-height: 100vh;
+  background-image: url('../images/bg.jpg');
+  @include img-bg;
+
+  &::before {
+    @include before;
+    background-image:
+      rlinear-gradient(107.54deg,
+        rgba(23, 26, 28, 0.72) 0%,
+        #5E5E57 100%);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.15;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 63px 0 30px;
+    height: 100vh;
+    z-index: 2;
+  }
+}
+
+.scroll-btn {
+  display: block;
+  margin: -47px auto 0;
+  margin-top: -40px;
+  width: 15px;
+  position: relative;
+  z-index: 5;
+
+  &__img {
+    width: 15px;
+    height: 7px;
+  }
+}

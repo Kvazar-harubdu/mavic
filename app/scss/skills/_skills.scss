@@ -1,0 +1,83 @@
+.skills {
+
+  &__title {
+    margin: 0 0 77px 25px;
+  }
+
+  &__inner {
+    @include img-bg;
+    background-size: 50%;
+    background-position: 50% 40%;
+    object-fit: contain;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 55px;
+  }
+
+  &__item {
+    position: relative;
+    width: 50%;
+
+    &::before {
+      @include before;
+      @include img-bg;
+    }
+
+    &:first-child::before {
+      width: 229px;
+      height: 115px;
+      top: 15px;
+      right: 145px;
+      background-image: url('../images/icons/pointer-1.svg');
+    }
+
+    &:nth-child(2)::before {
+      width: 260px;
+      height: 105px;
+      top: 15px;
+      left: 30px;
+      background-image: url('../images/icons/pointer-2.svg');
+    }
+
+    &:nth-child(3)::before {
+      width: 346px;
+      height: 81px;
+      right: 15px;
+      top: -65px;
+      background-image: url('../images/icons/pointer-3.svg');
+    }
+
+    &:last-child::before {
+      width: 124px;
+      height: 89px;
+      top: -70px;
+      left: 165px;
+      background-image: url('../images/icons/pointer-4.svg');
+    }
+
+    &:nth-child(-n + 2) {
+      margin-bottom: 135px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  &__caption {
+    max-width: 280px;
+    width: 100%;
+    font-size: 21px;
+    @include ubuntu-700;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    max-width: 280px;
+    width: 100%;
+    line-height: 1.3;
+  }
+}

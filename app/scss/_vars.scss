@@ -1,3 +1,24 @@
+$default: #ffffff;
+$nero: #1c1c1c;
+
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin img-bg {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+@mixin before {
+  content: "";
+  position: absolute;
+}
+
+
 @mixin ubuntu-300 {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
@@ -11,4 +32,14 @@
 @mixin ubuntu-700 {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 700;
+}
+
+@mixin sfDisplay-400 {
+  font-family: 'SFProDisplay', sans-serif;
+  font-weight: 400;
+}
+
+@mixin sfDisplay-600 {
+  font-family: 'SFProDisplay', sans-serif;
+  font-weight: 600;
 }
