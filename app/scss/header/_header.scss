@@ -41,17 +41,7 @@
     transition: all 0.5s ease-in;
     cursor: pointer;
     outline: transparent;
-
-    &:hover {
-      color: $nero;
-      border-color: $nero;
-      background-color: $default;
-    }
-
-    &:focus {
-      background-color: gold;
-      color: silver;
-    }
+    @include efect;
   }
 
   &__tell {

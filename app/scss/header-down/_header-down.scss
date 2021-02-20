@@ -72,4 +72,13 @@
       opacity: 0.5;
     }
   }
+
+  &--contacts {
+    flex-direction: column;
+    justify-content: center;
+
+    .social__item:not(:last-child) {
+      margin: 0 0 28px 0;
+    }
+  }
 }

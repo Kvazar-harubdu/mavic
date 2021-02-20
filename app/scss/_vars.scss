@@ -18,6 +18,18 @@ $nero: #1c1c1c;
   position: absolute;
 }
 
+@mixin efect {
+  &:hover {
+    color: $nero;
+    border-color: $nero;
+    background-color: $default;
+  }
+
+  &:focus {
+    background-color: gold;
+    color: silver;
+  }
+}
 
 @mixin ubuntu-300 {
   font-family: 'Ubuntu', sans-serif;

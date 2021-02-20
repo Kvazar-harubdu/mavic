@@ -1,31 +1,107 @@
-.contacts {}
+.contacts {
+
+  &__title {
+    margin-bottom: 56px;
+  }
+
+  &__inner {
+    display: flex;
+    margin-left: 55px;
+  }
+}
+
+.address {
+  font-style: normal;
+  max-width: 240px;
+  margin-right: 70px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__title {
+    font-size: 21px;
+    @include ubuntu-700;
+    margin-bottom: 13px;
+  }
+
+  &__link {
+    margin-bottom: 5px;
+
+    :hover {
+      text-decoration: underline;
+    }
+  }
+}
 
 
-.contacts__title {}
 
+.form {
+  max-width: 570px;
+  width: 100%;
+  margin-right: 106px;
 
-.contacts__inner {}
+  &__title {
+    font-size: 21px;
+    margin-bottom: 13px;
+  }
 
-.address {}
+  &__text {
+    margin-bottom: 12px;
+  }
 
-.address__item {}
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
 
-.address__title {}
+  &__label {
+    max-width: 280px;
+    width: 100%;
+  }
 
-.address__link {}
+  &__input {
+    max-width: 280px;
+    width: 100%;
+    height: 46px;
+    padding: 0 15px;
+    border: none;
+    outline: transparent;
+    background-color: rgba(#000, 0.5);
+    transition: all 0.5s ease-in;
+    @include efect;
+  }
 
-.form {}
+  &__textares {
+    width: 100%;
+    min-height: 144px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: none;
+    background-color: rgba(#000, 0.5);
+    resize: none;
+    transition: all 0.5s ease-in;
+    @include efect;
+  }
 
-.form__title {}
-
-.form__text {}
-
-.form__box {}
-
-.form__label {}
-
-.form__input {}
-
-.form__textares {}
-
-.form__btn {}
+  &__btn {
+    font-size: 14px;
+    @include ubuntu-700;
+    padding: 9px 15px;
+    text-transform: uppercase;
+    color: $default;
+    border-radius: 2px;
+    border: 1px solid $default;
+    cursor: pointer;
+    background-color: transparent;
+    outline: transparent;
+    transition: all 0.5s ease-in;
+    @include efect;
+  }
+}

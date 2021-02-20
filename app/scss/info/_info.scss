@@ -1,19 +1,71 @@
-.info {}
+.info {
 
+  &__title {
+    margin-bottom: 38px;
+  }
 
+  &__inner {
+    display: flex;
+    margin-left: 25px;
+  }
 
-.info__title {}
+  &__select {
+    max-width: 757px;
+    width: 100%;
+  }
 
+  &__item {
+    max-width: 690px;
+    width: 100%;
+    background-color: rgba(#000000, 0.3);
 
-.info__inner {}
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
 
-.info__select {}
+    &.info__item--active {
+      .info__text {
+        display: block;
+      }
 
-.info__item {}
+      .info__caption::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
 
-.info__caption {}
+  &__caption {
+    position: relative;
+    max-width: 690px;
+    width: 100%;
+    height: 72px;
+    padding: 20px 20px 24px 39px;
+    font-size: 21px;
+    @include ubuntu-500;
 
-.info__text {}
+    &::after {
+      @include before;
+      width: 72px;
+      height: 67px;
+      background-color: $default;
+      background-image: url('../images/icons/big-arrow-down.svg');
+      @include img-bg;
+      background-size: 25%;
+      right: -72px;
+      top: 0;
+      cursor: pointer;
+    }
+  }
 
-.info__img {}
+  &__text {
+    display: none;
+    padding: 0 0 75px 50px;
+  }
 
+  &__img {
+    object-fit: contain;
+    max-width: 320px;
+    align-self: flex-end;
+    margin-bottom: 30px;
+  }
+}
