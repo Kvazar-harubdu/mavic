@@ -33,13 +33,11 @@
   &__link {
     margin-bottom: 5px;
 
-    :hover {
+    &:hover {
       text-decoration: underline;
     }
   }
 }
-
-
 
 .form {
   max-width: 570px;
@@ -73,9 +71,14 @@
     padding: 0 15px;
     border: none;
     outline: transparent;
+    color: $default;
     background-color: rgba(#000, 0.5);
     transition: all 0.5s ease-in;
     @include efect;
+
+    &::placeholder {
+      font-size: 13px;
+    }
   }
 
   &__textares {
@@ -83,11 +86,17 @@
     min-height: 144px;
     margin-bottom: 20px;
     padding: 15px;
+    color: $default;
     border: none;
+    outline: transparent;
     background-color: rgba(#000, 0.5);
     resize: none;
     transition: all 0.5s ease-in;
     @include efect;
+
+    &::placeholder {
+      font-size: 13px;
+    }
   }
 
   &__btn {

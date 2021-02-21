@@ -11,4 +11,29 @@ $(function () {
     $(this).parent().addClass('info__item--active');
   });
 
+
+  $('#fullpage').fullpage({
+    autoScrolling: true,
+    scrollHorizontally: true,
+    scrollOverflow: true,
+    lazyLoading: true,
+    sectionSelector: '.section-page',
+    anchors: ['top', 'product', 'benefit', 'skills', 'info', 'contacts'],
+    menu: '#header__nav'
+  });
+
+
+
 });
+
+const anchors = querySelector('.scroll-btn')
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (event) {
+    event.preventDefault();
+    const blockId = anchor.getAttribute('href');
+    document.querySelector('' + blockId).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
